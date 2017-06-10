@@ -58,5 +58,5 @@ glory = media.Movie(\
 						"February 16, 1990"
 					)
 
-movies = [avatar, major_payne, ace_ventura, ace_ventura_wnc, glory]
+movies = [avatar, major_payne, ace_ventura, ace_ventura_wnc, the_blind_side, glory]
 fresh_tomatoes.open_movies_page(movies)
