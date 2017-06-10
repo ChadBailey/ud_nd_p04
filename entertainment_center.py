@@ -1,16 +1,19 @@
 #Intro to programming Project 4
 #Movie Website
 
+#Import media file which contains the Movie class
 import media
+#Import fresh_tomatoes which generates the website
 import fresh_tomatoes
 
+#Create instances of Movie class for each movie
 avatar = media.Movie(\
-						"Avatar",
-						"A marine on an alien planet",
-						"http://upload.wikimedia.org/wikipedia/id/b/b0/Avatar-Teaser-Poster.jpg",
-						"http://www.youtube.com/watch?v=-9ceBgWV8io",
-						4,
-						"Released: December 18, 2009"
+						"Avatar", #Movie Name
+						"A marine on an alien planet", #Movie Description
+						"http://upload.wikimedia.org/wikipedia/id/b/b0/Avatar-Teaser-Poster.jpg", #Movie poster image
+						"http://www.youtube.com/watch?v=-9ceBgWV8io", #Movie trailer
+						4, #Star rating (must be 0-5)
+						"Released: December 18, 2009" #Release date
 					)
 
 major_payne = media.Movie(\
@@ -57,6 +60,7 @@ glory = media.Movie(\
 						4,
 						"February 16, 1990"
 					)
-
+#Create a list of the objects to send along to fresh_tomatoes
 movies = [avatar, major_payne, ace_ventura, ace_ventura_wnc, the_blind_side, glory]
+#Send list of movie objects to fresh tomatoes for processing into a website.
 fresh_tomatoes.open_movies_page(movies)
