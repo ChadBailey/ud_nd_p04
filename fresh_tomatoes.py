@@ -1,5 +1,8 @@
+#Import web browser to open once done
 import webbrowser
+#Import os for file operations
 import os
+#Import regular expression to extract youtube ID from URL
 import re
 
 # Styles and scripting for the page
@@ -131,13 +134,15 @@ movie_tile_content = '''
     <h4>{release_date}</h4>
 </div>
 '''
-
+#Full star from font-awesome for star ratings http://fontawesome.io/icon/star/
 full_star = '<i class="fa fa-star" aria-hidden="true"></i>'
+#Empty star from font-awesome for star ratings http://fontawesome.io/icon/star-o/
 empty_star = '<i class="fa fa-star-o" aria-hidden="true"></i>'
 
 def create_movie_tiles_content(movies):
     # The HTML content for this section of the page
     content = ''
+    #For loop to cover each movie object contained within the movies list
     for movie in movies:
         # Extract the youtube ID from the url
         youtube_id_match = re.search(r'(?<=v=)[^&#]+', movie.trailer_youtube_url)
